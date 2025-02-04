@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>fr.umontpellier.iut</groupId>
+        <artifactId>applications-encheres</artifactId>
+        <version>${revision}</version>
+    </parent>
+    <packaging>pom</packaging>
+
+    <artifactId>modules</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>fr.umontpellier.iut</groupId>
+            <artifactId>commandesUtility</artifactId>
+            <version>${revision}</version>
+        </dependency>
+        <dependency>
+            <groupId>fr.umontpellier.iut</groupId>
+            <artifactId>socketwrapper</artifactId>
+            <version>${revision}</version>
+        </dependency>
+        <dependency>
+            <groupId>fr.umontpellier.iut</groupId>
+            <artifactId>queryhelper</artifactId>
+            <version>${revision}</version>
+        </dependency>
+        <dependency>
+            <groupId>fr.umontpellier.iut</groupId>
+            <artifactId>cryptowrapper</artifactId>
+            <version>${revision}</version>
+        </dependency>
+        <dependency>
+            <groupId>fr.umontpellier.iut</groupId>
+            <artifactId>shared</artifactId>
+            <version>${revision}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.6.0</version>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                    <skipAssembly>true</skipAssembly>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <modules>
+        <module>autorite</module>
+        <module>encherisseur</module>
+        <module>vendeur</module>
+    </modules>
+
+</project>

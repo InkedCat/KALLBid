@@ -1,0 +1,8 @@
+.libs:
+  variables: { MODULE: "libs/$MODULE_NAME" }
+
+
+.socketwrapper-module:
+  variables: { MODULE_NAME: "socketwrapper" }
+  extends:
+    - .libs

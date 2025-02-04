@@ -1,0 +1,20 @@
+# IntelliJ project files
+.idea/
+
+# Compiled class file
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+# Project files
+*.pfx
+*.pub
+*.pvt
+**/user-data.json
+**/user-token.json

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>fr.umontpellier.iut</groupId>
+        <artifactId>libs</artifactId>
+        <version>${revision}</version>
+    </parent>
+    <packaging>pom</packaging>
+
+    <artifactId>queries</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>fr.umontpellier.iut</groupId>
+            <artifactId>shared</artifactId>
+            <version>${revision}</version>
+        </dependency>
+        <dependency>
+            <groupId>fr.umontpellier.iut</groupId>
+            <artifactId>queryhelper</artifactId>
+            <version>${revision}</version>
+        </dependency>
+    </dependencies>
+
+    <modules>
+        <module>autench</module>
+        <module>venaut</module>
+        <module>enchven</module>
+    </modules>
+</project>

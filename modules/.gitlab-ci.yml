@@ -1,0 +1,19 @@
+.modules:
+    variables: { MODULE: "modules/$MODULE_NAME" }
+        
+
+.autorite-module:
+    variables: { MODULE_NAME: "autorite" }
+    extends: 
+        - .modules
+      
+
+.encherisseur-module:
+    variables: { MODULE_NAME: "encherisseur" }
+    extends: 
+        - .modules
+
+.vendeur-module:
+    variables: { MODULE_NAME: "vendeur" }
+    extends: 
+        - .modules

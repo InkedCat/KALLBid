@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>fr.umontpellier.iut</groupId>
+        <artifactId>modules</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <artifactId>vendeur</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>fr.umontpellier.iut</groupId>
+            <artifactId>venaut</artifactId>
+            <version>${revision}</version>
+        </dependency>
+        <dependency>
+            <groupId>fr.umontpellier.iut</groupId>
+            <artifactId>enchven</artifactId>
+            <version>${revision}</version>
+        </dependency>
+        <dependency>
+            <groupId>fr.umontpellier.iut</groupId>
+            <artifactId>authclientforge</artifactId>
+            <version>${revision}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.6.0</version>
+                <inherited>true</inherited>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>fr.umontpellier.iut.vendeur.Vendeur</mainClass>
+                        </manifest>
+                    </archive>
+                    <skipAssembly>false</skipAssembly>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
